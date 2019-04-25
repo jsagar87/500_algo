@@ -1,2 +1,2 @@
-# java-practices
-This repository contains sample code as a collection of small projects. Which can be reuse for further learning or development
+# 500-Algo
+This repository is attempt to solve 500 algorithmic problems found listed on one of the blog shared by a friend. 
