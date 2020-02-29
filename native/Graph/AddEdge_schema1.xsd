@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://MyGraphservice" xmlns:tns="http://MyGraphservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="E" type="tns:E"/>
+
+  <xs:element name="EResponse" type="tns:EResponse"/>
+
+  <xs:element name="V" type="tns:V"/>
+
+  <xs:element name="VResponse" type="tns:VResponse"/>
+
+  <xs:element name="addEdge" type="tns:addEdge"/>
+
+  <xs:element name="addEdgeResponse" type="tns:addEdgeResponse"/>
+
+  <xs:complexType name="addEdge">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addEdgeResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="V">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="VResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="E">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="EResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
