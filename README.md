@@ -1,2 +1,2 @@
 # Computing
-This repository is contains code from my programming practice.
+This repository contains code from my programming practice.
