@@ -1,0 +1,3 @@
+C:/Dev/Database_tut/build/CMakeFiles/dbtest.dir
+C:/Dev/Database_tut/build/CMakeFiles/edit_cache.dir
+C:/Dev/Database_tut/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Dev/Database_tut/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2017\\BUILDT~1\\VC\\Tools\\MSVC\\1416~1.270\\bin\\Hostx64\\x86\\cl.exe  /nologo /TP  -IC:\\Users\\jariwabh\\.conan\\data\\poco\\1.9.4\\_\\_\\package\\a088c771af139e3a190c5c420056a6875b063dab\\include -IC:\\Users\\jariwabh\\.conan\\data\\openssl\\1.0.2t\\_\\_\\package\\606fdb601e335c2001bdf31d478826b644747077\\include -IC:\\Users\\jariwabh\\.conan\\data\\zlib\\1.2.11\\_\\_\\package\\6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc   /MDd /Zi /Ob0 /Od /RTC1    -std=c++11 -DPOCO_STATIC=ON -DPOCO_NO_AUTOMATIC_LIBS /FoCMakeFiles\\dbtest.dir\\md5.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Dev\\Database_tut\\md5.cpp",
+  "file": "C:/Dev/Database_tut/md5.cpp"
+}
+]

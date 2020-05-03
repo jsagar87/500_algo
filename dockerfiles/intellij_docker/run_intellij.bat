@@ -1,0 +1,1 @@
+docker run -tdi -e DISPLAY=(Test-Connection -ComputerName (hostname) -Count 1).IPV4Address.IPAddressToString + ":0.0"  devimage
