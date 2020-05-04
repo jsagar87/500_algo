@@ -3,14 +3,24 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
+
+	"./api"
 )
 
 func main() {
-	http.HandleFunc("/", index)
-	http.ListenAndServe(":8080", nil)
+	http.HandleFunc("/", api.Index)
+	http.HandleFunc("/api/echo", api.Echo)
+	http.HandleFunc("/api/book", api.BookHandleFunc)
+	http.HandleFunc("/api/book/", api.BookHandleFunc)
+	http.ListenAndServe(port(), nil)
 }
 
-func index(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusOK)
-	fmt.Fprint(w, "Hello Cloud Native Go.")
+func port() string {
+	port := os.Getenv("PORT")
+	fmt.Println("Running on port : :" + port)
+	if len(port) == 0 {
+		port = "8080"
+	}
+	return ":" + port
 }
