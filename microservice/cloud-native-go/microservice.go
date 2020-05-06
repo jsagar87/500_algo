@@ -11,8 +11,8 @@ import (
 func main() {
 	http.HandleFunc("/", api.Index)
 	http.HandleFunc("/api/echo", api.Echo)
-	http.HandleFunc("/api/book", api.BookHandleFunc)
-	http.HandleFunc("/api/book/", api.BookHandleFunc)
+	http.HandleFunc("/api/books", api.BooksHandleFunc)
+	http.HandleFunc("/api/books/", api.BookHandleFunc)
 	http.ListenAndServe(port(), nil)
 }
 
