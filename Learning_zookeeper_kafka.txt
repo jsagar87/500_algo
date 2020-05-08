@@ -1,0 +1,33 @@
+Running Zookeeper Standalone and then -> Kafka Standalone.
+
+For Downloading, installing and Running zookeeper services followed standard documentation
+
+https://zookeeper.apache.org/doc/current/zookeeperStarted.html
+
+
+Producing messages and consuming it using Kafka
+
+https://dzone.com/articles/running-apache-kafka-on-windows-os
+
+
+While in standlone it did not run straight away. Two challenges that I faced is running Zookeeper and running kafka:
+1) Windows batch file to run Zookeeper didn't work straight away  as given int the articles/running-apache-kafka-on-windows-os.
+2) Kafka service after starting for standlone did not responded to producer's request 
+
+Solution or hack : Modified below line to next one in zkServer.bat
+REM call %JAVA% "-Dzookeeper.log.dir=%ZOO_LOG_DIR%" "-Dzookeeper.root.logger=%ZOO_LOG4J_PROP%" -cp "%CLASSPATH%" %ZOOMAIN% "%ZOOCFG%" %*
+call %JAVA% "-Dzookeeper.log.dir=%ZOO_LOG_DIR%" "-Dzookeeper.root.logger=%ZOO_LOG4J_PROP%" -cp "%CLASSPATH%" %ZOOMAIN% %*
+
+and then while starting server supplied commandline options for port number and  data dir:
+C:\Dev\zookeeper-3.4.12\bin>zkServer.cmd 2181 "C:\Dev\zookeeper-3.4.12\tmp\" 2000
+
+1) Hack for zookeeper batch not working ->
+I figured out that there was something wrong with windows batch file.
+Command configured to start batch file was missing something.
+So made a little hack in batch file command.
+
+2) For standlone kafka service config file was required to setup listener like this
+listeners=PLAINTEXT://localhost:9092
+
+found this solution on this stackoverflow discussion which worked.
+https://stackoverflow.com/questions/47677549/kafka-zookeeper-connection-to-node-1-could-not-be-established-broker-may-no
